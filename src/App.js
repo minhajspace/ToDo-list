@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Input from "./input";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Todolist from "./todolist";
+import Todoitem from "./todoitem";
+import "./App.css";
+
+class App extends React.Component {
+  state = {
+    item: [],
+    id: 0,
+    items: "null",
+    editItem: false
+  };
+  handleChnage = e => {
+    this.setState({
+      item: e.target.value
+    });
+  };
+
+  render() {
+    return (
+      <div className="contenair">
+        <div className="main">
+          <h1>Todo Input </h1>
+          <Input item={this.state.item} handleChnage={this.handleChnage} />
+
+          <Todolist />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
