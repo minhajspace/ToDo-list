@@ -17,13 +17,19 @@ class App extends React.Component {
       item: e.target.value
     });
   };
-
+  handleSubmit = e => {
+    e.preventDefault();
+  };
   render() {
     return (
       <div className="contenair">
         <div className="main">
           <h1>Todo Input </h1>
-          <Input item={this.state.item} handleChnage={this.handleChnage} />
+          <Input
+            item={this.state.item}
+            handleChnage={this.handleChnage}
+            handleSubmit={this.handleSubmit}
+          />
 
           <Todolist />
         </div>

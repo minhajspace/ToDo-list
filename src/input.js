@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 class Input extends Component {
   render() {
+    const { handleChange, handleSubmit, item } = this.props;
     return (
       <>
         <form>
