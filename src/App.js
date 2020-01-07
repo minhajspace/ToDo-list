@@ -1,5 +1,6 @@
 import React from "react";
 import Todoinput from './InputTodo'
+import './App.css'
 
 
 let today = new Date().toISOString().slice(0, 10)
