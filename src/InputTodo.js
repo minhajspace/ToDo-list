@@ -1,6 +1,6 @@
 import React from 'react'
 
-class InputTodo extends React.Component {
+class Todoinput extends React.Component {
     render() {
         return (
             <div></div>
@@ -8,4 +8,4 @@ class InputTodo extends React.Component {
     }
 }
 
-export default InputTodo; 
+export default Todoinput; 
