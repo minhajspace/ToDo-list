@@ -1,41 +1,14 @@
 import React from "react";
-import Input from "./input";
-
-import Todolist from "./todolist";
-import Todoitem from "./todoitem";
-import "./App.css";
+import InputTodo from './InputTodo'
 
 class App extends React.Component {
-  state = {
-    item: [],
-    id: 0,
-    items: "null",
-    editItem: false
-  };
-  handleChnage = e => {
-    this.setState({
-      item: e.target.value
-    });
-  };
-  handleSubmit = e => {
-    e.preventDefault();
-  };
   render() {
-    return (
-      <div className="contenair">
-        <div className="main">
-          <h1>Todo Input </h1>
-          <Input
-            item={this.state.item}
-            handleChnage={this.handleChnage}
-            handleSubmit={this.handleSubmit}
-          />
+    return <div className="ui segment">
+      <center>Todo List</center>
+      <div className="ui segment">
 
-          <Todolist />
-        </div>
       </div>
-    );
+    </div>;
   }
 }
-
 export default App;
