@@ -1,17 +1,20 @@
 import React from 'react'
 
+// const todolist = []
 class Todoinput extends React.Component {
     state = {
-        userInput: []
+        userInput: [],
+        todolist: []
     }
 
     onUserInput = (e) => {
-        e.preventDefault();
+        this.setState({ todolist: e.target.value })
 
     }
     onButtonClick = (e) => {
+        e.preventDefault();
+        this.setState({ userInput: this.state.todolist })
 
-        this.setState({ userInput: e.target.value })
 
     }
 
@@ -26,7 +29,7 @@ class Todoinput extends React.Component {
                             <input className=""
                                 type="text"
                                 placeholder="Enter your Todo task"
-                                value={""}
+                                value={this.state.todolist}
                                 onChange={this.onUserInput}
 
                             />
