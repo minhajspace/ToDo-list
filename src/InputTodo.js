@@ -3,6 +3,7 @@ import React from 'react'
 
 let arr = [];
 let tododata;
+let result;
 
 
 
@@ -10,21 +11,24 @@ let tododata;
 
 class Todoinput extends React.Component {
     state = {
-        userInput: [],
+        userInput: "",
         todolist: [],
     }
 
     onUserInput = (e) => {
 
-        tododata = e.target.value
-        arr = this.state.userInput
-        arr.push(tododata)
-        this.setState({ userInput: arr })
+        this.setState({ userInput: e.target.value })
+
+
+
+
 
     }
     onButtonClick = (e) => {
         e.preventDefault();
-        this.setState({ todolist: this.state.userInput })
+        tododata = this.state.userInput
+        arr.push(tododata)
+        this.setState({ todolist: arr })
     }
 
     onCancelButtonClick = () => {
@@ -41,7 +45,7 @@ class Todoinput extends React.Component {
                             <input className=""
                                 type="text"
                                 placeholder="Enter your Todo task"
-                                value={tododata}
+                                value={this.state.userInput}
                                 onChange={this.onUserInput}
 
                             />
