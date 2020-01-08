@@ -1,23 +1,36 @@
 import React from 'react'
 
-// const todolist = []
+
+const arr = [];
+let tododata;
+
+
+
 class Todoinput extends React.Component {
     state = {
         userInput: [],
-        todolist: []
+        todolist: [],
     }
 
     onUserInput = (e) => {
-        this.setState({ todolist: e.target.value })
+
+        tododata = e.target.value
+        console.log(tododata)
+        arr.push(tododata);
+        console.log(arr)
+        this.setState({ userInput: arr })
+
+
 
     }
     onButtonClick = (e) => {
         e.preventDefault();
-        this.setState({ userInput: this.state.todolist })
-
-
+        this.setState({ todolist: this.state.userInput })
     }
 
+    onCancelButtonClick = () => {
+
+    }
     render() {
         return (
             <>
@@ -29,7 +42,7 @@ class Todoinput extends React.Component {
                             <input className=""
                                 type="text"
                                 placeholder="Enter your Todo task"
-                                value={this.state.todolist}
+                                value={tododata}
                                 onChange={this.onUserInput}
 
                             />
@@ -43,7 +56,7 @@ class Todoinput extends React.Component {
                         <button className="ui positive button " onClick={this.onButtonClick}>Save</button>
                     </div>
                     <div className="ui segment">
-                        <h5>{this.state.userInput}</h5>
+                        <h5>{this.state.todolist}</h5>
 
                     </div>
 
