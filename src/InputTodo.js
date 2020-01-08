@@ -1,8 +1,10 @@
 import React from 'react'
 
 
-const arr = [];
+let arr = [];
 let tododata;
+
+
 
 
 
@@ -15,12 +17,9 @@ class Todoinput extends React.Component {
     onUserInput = (e) => {
 
         tododata = e.target.value
-        console.log(tododata)
-        arr.push(tododata);
-        console.log(arr)
+        arr = this.state.userInput
+        arr.push(tododata)
         this.setState({ userInput: arr })
-
-
 
     }
     onButtonClick = (e) => {
