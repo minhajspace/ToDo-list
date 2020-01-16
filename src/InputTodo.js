@@ -3,7 +3,6 @@ import React from 'react'
 
 let arr = [];
 let tododata;
-let result;
 
 
 
@@ -16,25 +15,19 @@ class Todoinput extends React.Component {
     }
 
     onUserInput = (e) => {
-
         this.setState({ userInput: e.target.value })
-
-
-
-
-
     }
     onButtonClick = (e) => {
         e.preventDefault();
         tododata = this.state.userInput
         arr.push(tododata)
         this.setState({ todolist: arr })
-    }
-
-    onCancelButtonClick = () => {
+        this.setState({ userInput: "" })
 
     }
+
     render() {
+
         return (
             <>
                 <form>
@@ -47,11 +40,8 @@ class Todoinput extends React.Component {
                                 placeholder="Enter your Todo task"
                                 value={this.state.userInput}
                                 onChange={this.onUserInput}
-
                             />
-
                         </div>
-
                     </div>
                     <div className="ui buttons fluid">
                         <button className="ui button  ">Cancel</button>
@@ -60,9 +50,7 @@ class Todoinput extends React.Component {
                     </div>
                     <div className="ui segment">
                         <h5>{this.state.todolist}</h5>
-
                     </div>
-
                 </form>
             </>
 
@@ -70,4 +58,5 @@ class Todoinput extends React.Component {
     }
 }
 
-export default Todoinput; 
+
+export default Todoinput;
