@@ -25,6 +25,9 @@ class Todoinput extends React.Component {
         this.setState({ userInput: "" })
 
     }
+    onDoneClick = (e) => {
+        this.state.todolist.pop()
+    }
 
     render() {
 
@@ -49,7 +52,12 @@ class Todoinput extends React.Component {
                         <button className="ui positive button " onClick={this.onButtonClick}>Save</button>
                     </div>
 
-                    <h5>{this.state.todolist.map((items, key) => (<div className="ui segment">{items}</div>))}</h5>
+                    {this.state.todolist.map((items, key) => (<div className="ui segment">{items}
+
+                        <button class="ui right floated  red basic button ">Edit</button>
+                        <button class="ui right floated  red basic button" onClick={}>Done</button>
+
+                    </div>))}
 
                 </form>
             </>
