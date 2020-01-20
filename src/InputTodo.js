@@ -48,9 +48,9 @@ class Todoinput extends React.Component {
                         <div className="or"></div>
                         <button className="ui positive button " onClick={this.onButtonClick}>Save</button>
                     </div>
-                    <div className="ui segment">
-                        <h5>{this.state.todolist}</h5>
-                    </div>
+
+                    <h5>{this.state.todolist.map((items, key) => (<div className="ui segment">{items}</div>))}</h5>
+
                 </form>
             </>
 
