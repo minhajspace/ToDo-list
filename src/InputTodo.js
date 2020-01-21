@@ -28,6 +28,9 @@ class Todoinput extends React.Component {
     onDoneClick = (e) => {
         e.preventDefault();
     }
+    onEditClick = (e) => {
+        e.preventDefault();
+    }
 
     render() {
 
@@ -53,7 +56,7 @@ class Todoinput extends React.Component {
 
                     {this.state.todolist.map((items, key) => (<div className="ui segment">{items}
 
-                        <button className="ui right floated  red basic button " >Edit</button>
+                        <button className="ui right floated  red basic button " onClick={this.onEditClick}>Edit</button>
                         <button className="ui right floated  red basic button" onClick={this.onDoneClick}>Done</button>
 
                     </div>))}
