@@ -10,6 +10,7 @@ let tododata;
 
 class Todoinput extends React.Component {
     state = {
+        isTrue: true,
         userInput: "",
         todolist: [],
     }
