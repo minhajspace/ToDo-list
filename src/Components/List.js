@@ -1,9 +1,17 @@
 import React from 'react'
 
-const List = (props) => {
-    console.log(props.list.lenght)
-    return <div>
+class List extends React.Component {
+    onSubmit = (list) => {
+        console.log(list)
+    }
 
-    </div>
+    render() {
+        return (
+            <div>
+
+            </div>
+        )
+    }
 }
+
 export default List

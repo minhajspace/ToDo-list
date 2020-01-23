@@ -1,9 +1,11 @@
 import React from "react";
 import Todoinput from './Components/InputTodo'
 import './App.css'
+import Greeting from "./Components/Greting";
+import List from './Components/List'
 
 
-let today = new Date().toISOString().slice(0, 10)
+
 
 class App extends React.Component {
 
@@ -11,13 +13,11 @@ class App extends React.Component {
   render() {
 
     return (<>
-      <div className="ui segment">
-        <center><h1>Todo List</h1></center>
-      </div>
-      <div className="ui segment">
-        <center><h3>{today}</h3></center>
+      <Greeting />
+      <Todoinput />
+      <List />
 
-      </div>
+
     </>)
 
 
