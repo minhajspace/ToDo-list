@@ -1,5 +1,5 @@
 import React from "react";
-import Todoinput from './InputTodo'
+import Todoinput from './Components/InputTodo'
 import './App.css'
 
 
