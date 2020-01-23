@@ -8,13 +8,15 @@ import List from './Components/List'
 
 
 class App extends React.Component {
-
+  onUserSubmit = (props) => {
+    console.log(props.list)
+  }
 
   render() {
 
     return (<>
       <Greeting />
-      <Todoinput />
+      <Todoinput onSubmit={this.onUserSubmit} />
       <List />
 
 

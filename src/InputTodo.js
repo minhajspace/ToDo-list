@@ -24,6 +24,7 @@ class Todoinput extends React.Component {
             })
         this.props.onSubmit(this.state.todolist)
     }
+
     onDoneClick = (e) => {
         e.preventDefault();
     }
@@ -51,14 +52,6 @@ class Todoinput extends React.Component {
 
                         <button className="ui positive button " onClick={this.onButtonClick}>Save</button>
                     </div>
-                    {/* 
-                    {this.state.todolist.map((items, key) => (<div className="ui segment">{items}
-
-                        <button className="ui right floated  red basic button " onClick={this.onEditClick}>Edit</button>
-                        <button className="ui right floated  red basic button" onClick={this.onDoneClick}>Done</button>
-
-                    </div>))} */}
-
 
                 </form>
             </>
