@@ -15,8 +15,9 @@ class Todoinput extends React.Component {
     }
     onButtonClick = (e) => {
         e.preventDefault();
-        tododata = this.state.userInput
-        arr.push(tododata)
+        arr.push(this.state.userInput)
+        console.log(arr)
+
         this.setState(
             {
                 todolist: arr,
