@@ -17,8 +17,12 @@ class Todoinput extends React.Component {
         e.preventDefault();
         tododata = this.state.userInput
         arr.push(tododata)
-        this.setState({ todolist: arr })
-        this.setState({ userInput: "" })
+        this.setState(
+            {
+                todolist: arr,
+                userInput: ""
+            })
+
 
     }
     onDoneClick = (e) => {
@@ -34,7 +38,6 @@ class Todoinput extends React.Component {
             <>
                 <form>
                     <div className="ui segment">
-
                         <div className="ui fluid icon input transparent ">
 
                             <input className=""

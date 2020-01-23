@@ -16,6 +16,7 @@ class App extends React.Component {
       </div>
       <div className="ui segment">
         <center><h3>{today}</h3></center>
+
       </div>
     </>)
 

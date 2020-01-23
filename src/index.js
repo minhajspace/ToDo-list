@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import Todoinput from "./InputTodo";
+import List from './Components/List'
 
 const Index = () => {
     return (
         <>
             <App />
             <Todoinput />
+            <List list />
         </>
     )
 
