@@ -1,6 +1,9 @@
 import React from 'react'
 
-const InputTodo = () => {
+const InputTodo = (props) => {
+
+    const items = props.items;
+
     return (
         <>
             <form>
@@ -10,6 +13,7 @@ const InputTodo = () => {
                         <input className=""
                             type="text"
                             placeholder="Enter your Todo task"
+                            value={props.handleInput}
 
                         />
                     </div>

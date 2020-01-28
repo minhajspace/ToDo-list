@@ -5,15 +5,31 @@ import InputTodo from './InputTodo'
 class App extends React.Component {
   state = {
     items: [],
-    currentItem: " ",
-    key: "",
-    text: ""
+    currentItem: {
+      key: "",
+      text: ""
+    }
   }
+
+  handleInput = (e) => {
+    this.setState({
+      currentItem: {
+        key: Date.now(),
+        text: e.target.value
+      }
+    })
+    console.log(this.state.text)
+  }
+
+  addInput = (e) => {
+
+  }
+
 
   render() {
     return (
       <div>
-        <InputTodo />$ git clone https://github.com/schacon/simplegit-progit
+        <InputTodo handleInput={this.handleInput} />
       </div>
     )
   }
