@@ -66,6 +66,7 @@ class App extends React.Component {
         </form>
         <InputTodo listData={this.state.list} />
       </>
+
     )
   }
 }

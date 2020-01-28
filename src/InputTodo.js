@@ -2,7 +2,16 @@ import React from 'react'
 
 const InputTodo = (props) => {
 
-    const items = props.items;
+    const list = props.listData;
+    // const listData = list.map(items => {
+    //     return <div>
+    //         {items}
+    //     </div>
+    // })
+
+
+
+
 
     return (
         <>
