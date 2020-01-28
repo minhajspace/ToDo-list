@@ -18,19 +18,39 @@ class App extends React.Component {
         text: e.target.value
       }
     })
-    console.log(this.state.text)
+    console.log(
+      this.state.currentItem.text,
+      this.state.currentItem.key
+    )
   }
 
   addInput = (e) => {
+    e.preventDefault()
 
   }
 
 
   render() {
     return (
-      <div>
-        <InputTodo handleInput={this.handleInput} />
-      </div>
+      <form>
+        <div className="ui segment">
+          <div className="ui fluid icon input transparent ">
+
+            <input className=""
+              type="text"
+              placeholder="Enter your Todo task"
+              value={this.state.text}
+              onChange={this.handleInput}
+
+            />
+          </div>
+        </div>
+        <div className="ui buttons fluid">
+
+          <button className="ui positive button " onSubmit={this.addInput}>Save</button>
+        </div>
+
+      </form>
     )
   }
 }
