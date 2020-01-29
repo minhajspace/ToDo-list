@@ -9,6 +9,9 @@ const InputTodo = (props) => {
                 className="positive ui button " onClick={() => {
                     props.onDeleteClick(value.key)
                 }}>Delete</button>
+                <button className="positive ui button" onClick={
+                    props.onEditClick(value.text, value.key)
+                }>Edit</button>
             </p> </div>
     })
 

@@ -47,10 +47,14 @@ class App extends React.Component {
     this.setState({
       list: filterList
     })
-
-
-
   }
+
+  onEditClick = (text, key) => {
+    console.log(
+      text, key
+    )
+  }
+
 
 
   render() {
@@ -75,7 +79,7 @@ class App extends React.Component {
           </div>
 
         </form>
-        <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} />
+        <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} onEditClick={this.onEditClick} />
       </>
 
     )
