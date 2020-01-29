@@ -5,13 +5,15 @@ const InputTodo = (props) => {
 
     const listdata = props.listitems.map((value) => {
         return <div className="ui segment" key={value.key}>
-            <p>{value.text}   <button
-                className="positive ui button " onClick={() => {
-                    props.onDeleteClick(value.key)
-                }}>Delete</button>
-                <button className="positive ui button" onClick={
-                    props.onEditClick(value.text, value.key)
-                }>Edit</button>
+            <p>
+                <input type="text" className="" value={value.text} onChange={(e) => {
+                    props.onEditClick(e.target.value, value.key, value.text)
+                }} />
+                <button
+                    className="positive ui button " onClick={() => {
+                        props.onDeleteClick(value.key)
+                    }}>Delete</button>
+
             </p> </div>
     })
 

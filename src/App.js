@@ -50,9 +50,19 @@ class App extends React.Component {
   }
 
   onEditClick = (text, key) => {
-    console.log(
-      text, key
-    )
+
+    console.log("items:" + this.state.list);
+    const items = this.state.list;
+    this.state.list.map(item => {
+      if (item.key === key) {
+        console.log(item.key + "    " + key)
+        item.text = text;
+      }
+    })
+    this.setState({
+      list: items
+    })
+
   }
 
 
