@@ -2,11 +2,11 @@ import React from 'react'
 
 const InputTodo = (props) => {
     // const { listitems } = props.listitems
-    console.log(props.listitems)
+
     const listdata = props.listitems.map((value) => {
         return <div className="ui segment" key={value.key}>
-            <p>{value.text} </p>
-        </div>
+            <p>{value.text}   <button className="positive ui button ">Delete</button>
+            </p>       </div>
     })
 
 
