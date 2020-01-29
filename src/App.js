@@ -40,9 +40,10 @@ class App extends React.Component {
     }
   }
 
-  handleDelete = (key) => {
+  delete = (key) => {
 
-    const filterList = this.state.list.filter(item => item.key !== key)
+    const filterList = this.state.list.filter(item => console.log(item.key, key))
+
     this.setState({ list: filterList })
 
 
@@ -72,7 +73,7 @@ class App extends React.Component {
           </div>
 
         </form>
-        <InputTodo listitems={this.state.list} handleDelete={this.handleDelete} />
+        <InputTodo listitems={this.state.list} delete={this.delete} />
       </>
 
     )
