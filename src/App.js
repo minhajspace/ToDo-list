@@ -40,11 +40,13 @@ class App extends React.Component {
     }
   }
 
-  delete = (key) => {
-
-    const filterList = this.state.list.filter(item => console.log(item.key, key))
-
-    this.setState({ list: filterList })
+  onDeleteClick = (key) => {
+    console.log(this.state.list)
+    console.log(key, this.state.currentItem.key)
+    const filterList = this.state.list.filter(items => items.key !== key)
+    this.setState({
+      list: filterList
+    })
 
 
 
@@ -73,7 +75,7 @@ class App extends React.Component {
           </div>
 
         </form>
-        <InputTodo listitems={this.state.list} delete={this.delete} />
+        <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} />
       </>
 
     )

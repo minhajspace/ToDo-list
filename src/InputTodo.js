@@ -5,9 +5,10 @@ const InputTodo = (props) => {
 
     const listdata = props.listitems.map((value) => {
         return <div className="ui segment" key={value.key}>
-            <p>{value.text}   <button onClick={() => {
-                props.delete(value.key)
-            }} className="positive ui button ">Delete</button>
+            <p>{value.text}   <button
+                className="positive ui button " onClick={() => {
+                    props.onDeleteClick(value.key)
+                }}>Delete</button>
             </p> </div>
     })
 
