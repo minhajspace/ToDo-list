@@ -40,8 +40,10 @@ class App extends React.Component {
     }
   }
 
-  handleDelete = (e) => {
-    e.preventDefault()
+  handleDelete = (key) => {
+
+    const filterList = this.state.list.filter(item => item.key !== key)
+    this.setState({ list: filterList })
 
 
 
