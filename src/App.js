@@ -29,9 +29,8 @@ class App extends React.Component {
     const userInput = this.state.currentItem
     if (this.state.currentItem.text !== "") {
       const input = [...this.state.list, userInput]
-      console.log(input)
       this.setState({
-        list: this.state.list.push(input),
+        list: input,
         userInput: {
           text: "",
           key: ""
@@ -64,7 +63,7 @@ class App extends React.Component {
           </div>
 
         </form>
-        <InputTodo listData={this.state.list} />
+        <InputTodo listitems={this.state.list} />
       </>
 
     )
