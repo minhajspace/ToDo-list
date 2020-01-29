@@ -5,7 +5,7 @@ const InputTodo = (props) => {
 
     const listdata = props.listitems.map((value) => {
         return <div className="ui segment" key={value.key}>
-            <p>{value.text}   <button className="positive ui button ">Delete</button>
+            <p>{value.text}   <button onSubmit={props.handleDelete} className="positive ui button ">Delete</button>
             </p>       </div>
     })
 

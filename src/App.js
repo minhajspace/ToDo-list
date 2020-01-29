@@ -40,6 +40,13 @@ class App extends React.Component {
     }
   }
 
+  handleDelete = (e) => {
+    e.preventDefault()
+
+
+
+  }
+
 
   render() {
     return (
@@ -63,7 +70,7 @@ class App extends React.Component {
           </div>
 
         </form>
-        <InputTodo listitems={this.state.list} />
+        <InputTodo listitems={this.state.list} handleDelete={this.handleDelete} />
       </>
 
     )
