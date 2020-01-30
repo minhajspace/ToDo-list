@@ -1,5 +1,7 @@
 import React from 'react';
 import InputTodo from './InputTodo'
+import Greting from './Components/Greting'
+import Greeting from './Components/Greting';
 
 
 class App extends React.Component {
@@ -67,6 +69,7 @@ class App extends React.Component {
   render() {
     return (
       <>
+        <Greeting />
         <form onSubmit={this.addInput}>
           <div className="ui segment">
             <div className="ui fluid icon input transparent ">
