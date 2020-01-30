@@ -1,6 +1,6 @@
 import React from 'react';
 import InputTodo from './InputTodo'
-import Greting from './Components/Greting'
+
 import Greeting from './Components/Greting';
 
 
