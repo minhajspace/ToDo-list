@@ -4,14 +4,14 @@ const InputTodo = (props) => {
     // const { listitems } = props.listitems
 
     const listdata = props.listitems.map((value) => {
-        return <div className="ui segment" key={value.key}>
+        return <div className="ui menu" key={value.key}>
             <p>
                 <input type="text" className="" value={value.text} onChange={(e) => {
                     props.onEditClick(e.target.value, value.key, value.text)
                 }} />
                 <div className="right menu">
                     <button
-                        className="positive ui button " onClick={() => {
+                        className="ui negative basic  button" onClick={() => {
                             props.onDeleteClick(value.key)
                         }}>Delete</button>
                 </div>
