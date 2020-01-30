@@ -9,10 +9,12 @@ const InputTodo = (props) => {
                 <input type="text" className="" value={value.text} onChange={(e) => {
                     props.onEditClick(e.target.value, value.key, value.text)
                 }} />
-                <button
-                    className="positive ui button " onClick={() => {
-                        props.onDeleteClick(value.key)
-                    }}>Delete</button>
+                <div className="right menu">
+                    <button
+                        className="positive ui button " onClick={() => {
+                            props.onDeleteClick(value.key)
+                        }}>Delete</button>
+                </div>
 
             </p> </div>
     })
