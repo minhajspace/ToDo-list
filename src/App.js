@@ -27,6 +27,7 @@ class App extends React.Component {
   addInput = (e) => {
     e.preventDefault()
     const userInput = this.state.currentItem
+    console.log(userInput)
     if (this.state.currentItem.text !== "") {
       const input = [...this.state.list, userInput]
       this.setState({
@@ -50,19 +51,15 @@ class App extends React.Component {
   }
 
   onEditClick = (text, key) => {
-
-    console.log("items:" + this.state.list);
-    const items = this.state.list;
-    this.state.list.map(item => {
-      if (item.key === key) {
-        console.log(item.key + "    " + key)
-        item.text = text;
+    const list = this.state.list
+    list.map((value) => {
+      if (value.key === key) {
+        value.text = text
       }
     })
     this.setState({
-      list: items
+      list: list
     })
-
   }
 
 
