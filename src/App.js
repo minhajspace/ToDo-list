@@ -68,7 +68,7 @@ class App extends React.Component {
 
   onCompleteClick = () =>{
     this.setState({
-     complete:true  })
+     complete:true  });
      console.log(this.state.complete)
   }
 
@@ -96,7 +96,7 @@ class App extends React.Component {
           </div>
 
         </form>
-        <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} onEditClick={this.onEditClick} onCompleteClick={this.onCompleteClick}/>
+        <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} onEditClick={this.onEditClick} onCompleteClick={this.onCompleteClick} complete={this.state.complete}/>
        
 
       </>
