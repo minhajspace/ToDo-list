@@ -4,9 +4,9 @@ const InputTodo = (props) => {
     // const { listitems } = props.listitems
 
     const listdata = props.listitems.map((value) => {
-        return <div className="ui menu ui fluid icon input" key={value.key}>
+        return <div className="ui menu  icon input" key={value.key}>
 
-            <input type="text" className="" value={value.text} onChange={(e) => {
+            <input type="text" className="" style={{ background: 'green' }}value={value.text} onChange={(e) => {
                 props.onEditClick(e.target.value, value.key, value.text)
             }} />
 
