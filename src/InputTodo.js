@@ -11,6 +11,10 @@ const InputTodo = (props) => {
             }} />
 
             <div className="right menu">
+                <button
+                    className="ui negative basic  button" onClick={() => {
+                        props.onDeleteClick(value.key)
+                    }}>Complete</button>
 
                 <button
                     className="ui negative basic  button" onClick={() => {
