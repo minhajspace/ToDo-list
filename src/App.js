@@ -7,6 +7,7 @@ import Greeting from './Components/Greting';
 class App extends React.Component {
   state = {
     list: [],
+    complete:false,
     currentItem: {
       key: "",
       text: ""
@@ -65,6 +66,11 @@ class App extends React.Component {
     })
   }
 
+  onCompleteClick = () =>{
+    this.setState({
+     complete:true  })
+     console.log(this.state.complete)
+  }
 
 
   render() {
@@ -90,7 +96,7 @@ class App extends React.Component {
           </div>
 
         </form>
-        <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} onEditClick={this.onEditClick} />
+        <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} onEditClick={this.onEditClick} onCompleteClick={this.onCompleteClick}/>
        
 
       </>
