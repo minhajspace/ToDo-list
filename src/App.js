@@ -34,12 +34,13 @@ class App extends React.Component {
       const input = [...this.state.list, userInput]
       this.setState({
         list: input,
-        userInput: {
+        currentItem: {
           text: "",
           key: ""
         }
       })
-      console.log(this.state.list)
+
+      console.log(this.state.currentItem.text)
     }
   }
 
@@ -90,6 +91,7 @@ class App extends React.Component {
 
         </form>
         <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} onEditClick={this.onEditClick} />
+        
       </>
 
     )
