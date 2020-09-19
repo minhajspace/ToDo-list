@@ -66,12 +66,11 @@ class App extends React.Component {
     })
   }
 
-  onCompleteClick = () =>{
+   onCompleteClick = () =>{
     this.setState({
-     complete:true  });
-     console.log(this.state.complete)
-  }
-
+     complete:true  },this.setState({complete:false}));
+    }
+ 
 
   render() {
     return (
