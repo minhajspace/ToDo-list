@@ -10,7 +10,8 @@ class App extends React.Component {
     complete:false,
     currentItem: {
       key: "",
-      text: ""
+      text: "",
+      complete:false
     }
   }
 
@@ -67,8 +68,10 @@ class App extends React.Component {
   }
 
    onCompleteClick = () =>{
-    this.setState({
-     complete:true  },this.setState({complete:false}));
+     this.setState({currentItem:{
+       complete:true
+     }})
+    console.log(this.state.list);
     }
  
 
@@ -95,7 +98,7 @@ class App extends React.Component {
           </div>
 
         </form>
-        <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} onEditClick={this.onEditClick} onCompleteClick={this.onCompleteClick} complete={this.state.complete}/>
+        <InputTodo listitems={this.state.list} onDeleteClick={this.onDeleteClick} onEditClick={this.onEditClick} onCompleteClick={this.onCompleteClick} complete={this.state.currentItem.complete}/>
        
 
       </>
