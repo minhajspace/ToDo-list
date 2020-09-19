@@ -19,7 +19,8 @@ class App extends React.Component {
     this.setState({
       currentItem: {
         key: Date.now(),
-        text: e.target.value
+        text: e.target.value,
+        complete:false
       }
     })
     console.log(
@@ -38,7 +39,8 @@ class App extends React.Component {
         list: input,
         currentItem: {
           text: "",
-          key: ""
+          key: "",
+          complete:false
         }
       })
 
