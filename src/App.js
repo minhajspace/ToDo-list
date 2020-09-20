@@ -20,7 +20,7 @@ class App extends React.Component {
       currentItem: {
         key: Date.now(),
         text: e.target.value,
-        complete:false
+        complete:''
       }
     })
     console.log(
