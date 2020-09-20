@@ -7,7 +7,7 @@ import Greeting from './Components/Greting';
 class App extends React.Component {
   state = {
     list: [],
-    complete:false,
+   
     currentItem: {
       key: "",
       text: "",
