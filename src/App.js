@@ -20,7 +20,7 @@ class App extends React.Component {
       currentItem: {
         key: Date.now(),
         text: e.target.value,
-        complete:''
+        complete:false
       }
     })
     console.log(
@@ -74,8 +74,8 @@ class App extends React.Component {
        complete:true
      }})
     console.log(this.state.list);
+    console.log(this.state.currentItem);
     }
- 
 
   render() {
     return (
