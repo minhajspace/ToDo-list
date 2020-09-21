@@ -69,7 +69,8 @@ class App extends React.Component {
     })
   }
 
-   onCompleteClick = () =>{
+   onCompleteClick = (key) =>{
+     console.log(key)
      this.setState({currentItem:{
        complete:true
      }})
