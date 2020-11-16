@@ -20,7 +20,7 @@ function CleanModal(props) {
                 <div style={{ marginTop: "20px" }} className="ui buttons fluid">
                     <button
                         className="ui blue basic button "
-                        onClick={this.handleClearList}
+                        onClick={props.handleClearList}
                     >
                         Clean List
           </button>

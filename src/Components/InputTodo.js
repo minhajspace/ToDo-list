@@ -59,7 +59,7 @@ class InputTodo extends React.Component {
         this.setState({ list: newTodo });
         return newTodo;
     };
-    handleModal = () => { };
+    
     render() {
         return (
             <div className="ui segment">

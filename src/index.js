@@ -5,9 +5,9 @@ import Greeting from "./Components/Greeting";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
-    <React.StrictMode>
+   <div>
         <Greeting />
         <InputTodo />
-    </React.StrictMode>,
+    </div>,
     rootElement
 );
