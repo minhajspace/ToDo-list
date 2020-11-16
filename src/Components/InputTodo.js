@@ -1,7 +1,7 @@
 import React from "react";
 import { Checkbox } from "semantic-ui-react";
 import EditModal from "./Editmodal";
-import "./styles.css";
+import "../App.css";
 import CleanModal from "./Cleanmodal";
 class InputTodo extends React.Component {
     state = {

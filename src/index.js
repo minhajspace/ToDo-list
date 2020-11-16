@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import InputTodo from "./InputTodo";
-import Greeting from "./Greeting";
+import InputTodo from "./Components/InputTodo";
+import Greeting from "./Components/Greeting";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
