@@ -1,4 +1,22 @@
-* {
-  margin: 0;
-  padding: 0;
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.checkbox {
+  margin-top: 2.5px;
+}
+
+.green {
+  background: green !important;
+  color: white;
+}
+
+.icon-size {
+  font-size: large !important;
+  margin-right: 0.5em !important;
 }
